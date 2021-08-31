@@ -4,17 +4,13 @@ table, th, td {
   padding: 5px;
 }
 
-.holder {
+table{
   overflow-x:auto;
 }
 
-.tableheader {
+th {
   font-size:20px;
   font-weight:bolder;
-}
-
-.tablecell {
-  font-size:16px;
 }
 
 #video{
