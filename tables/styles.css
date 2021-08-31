@@ -1,0 +1,23 @@
+table, th, td {
+  border: 2px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+.holder {
+  overflow-x:auto;
+}
+
+.tableheader {
+  font-size:24px;
+  font-weight:bolder;
+}
+
+.tablecell {
+  font-size:16px;
+}
+
+#video{
+  width: 420px;
+  height: 235px;
+}
