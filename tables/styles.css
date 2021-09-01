@@ -4,19 +4,35 @@ table, th, td {
   padding: 5px;
 }
 
-table{
-  overflow-x:auto;
+h1 {
+  font-family: 'ZCOOL KuaiLe', cursive; 
+  text-align: center;
+  font-size: 50px;
+  background-color: rgb(192, 43, 43);
+  color: rgb(255,255,255);
+  margin:-8px;
+  padding: 15px;
 }
+
+h2,table{font-family: 'ZCOOL QingKe HuangYou', cursive;}
+
+h2 {
+  font-size: 30px;
+}
+
+table {overflow-x:auto;}
 
 th {
   font-size:20px;
   font-weight:bolder;
 }
 
+tr:nth-child(even) { background-color: rgb(230,230,230);}
+
 #video{
-  width: 520px;
-  height: 335px;
-  margin: 10px;
+  width: 720px;
+  height: 435px;
+  margin: 20px;
 }
 
 .image{
