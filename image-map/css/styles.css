@@ -3,16 +3,9 @@ h1{
   text-align: center;
 }
 
-h3{
-  font-size: 25px;
-  text-align: center;
-}
-
 img {
   width: 500px;
   height: auto;
-  border: 1px solid grey;
-  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.1);
 }
 
 #list-container{
@@ -24,10 +17,18 @@ img {
 .container{
   display:flex;
   justify-content: space-evenly;
+  margin: 2% 10%;
+  padding:20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.1);
 }
 
 .list{
   padding:30px;
   font-size: 20px;
-  color:blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
 }
+
