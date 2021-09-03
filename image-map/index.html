@@ -1,37 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Image Map</title>
-  </head>
 
-  <body>
-    <h1>This is the image map</h1>
-    <img src="img/music.jpeg" alt="music picture" usemap="#musicmap" />
-    <map name="musicmap">
-      <area shape="rect" coords="74,160,121,231" alt="red-speaker" href="https://www.w3schools.com/html/html_images_imagemap.asp">
-      <area shape="rect" coords="289,312,361,364" alt="purple-radio" href="https://www.w3schools.com/html/html_images_imagemap.asp">
-      <area shape="rect" coords="202,351,224,417" alt="blue-mic" href="https://www.w3schools.com/html/html_images_imagemap.asp">
-      <area shape="circle" coords="174,101,30" alt="red-not-top-left" href="https://www.w3schools.com/html/html_images_imagemap.asp">
-      <area shape="circle" coords="296,393,24" alt="red-note-bot-rig" href="https://www.w3schools.com/html/html_images_imagemap.asp">
-      <area shape="circle" coords="332,78,20" alt="blue-break-top" href="https://www.w3schools.com/html/html_images_imagemap.asp">
-      <area 
-        shape="poly" 
-        coords="172,381,187,370,191,350,212,334,201,313,297,203,270,184,201,283,186,275,163,310,129,351" 
-        alt="Guitar" 
-        href="https://en.wikipedia.org/wiki/Guitar">
-      <area 
-        shape="poly" 
-        coords="270,144,306,148,313,136,393,141,406,156,428,164,363,178,265,184" 
-        alt="Trumpet" 
-        href="https://en.wikipedia.org/wiki/Trumpet#:~:text=The%20trumpet%20is%20a%20brass,B%E2%99%AD%20or%20C%20Trumpet.">
-      <area 
-        shape="poly" 
-        coords="205,262,202,223,187,208,190,135,242,133,235,211,222,223,223,261" 
-        alt="Violin" 
-        href="https://en.wikipedia.org/wiki/Violin">
-    </map>
-  </body>
+<head>
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Image Map</title>
+</head>
+
+<body>
+  <h1>My Image Map</h1>
+  <h3>Musical Symbols, Notes, and Instruments</h3>
+
+  <div class="container">
+    <div id="image-map">
+      <img src="img/music.jpeg" alt="music picture" usemap="#musicmap" />
+      <map name="musicmap">
+        <area shape="rect" coords="74,160,121,231" alt="red-speaker"
+          href="https://www.w3schools.com/html/html_images_imagemap.asp">
+        <area shape="rect" coords="289,312,361,364" alt="purple-radio"
+          href="https://www.w3schools.com/html/html_images_imagemap.asp">
+        <area shape="rect" coords="202,351,224,417" alt="blue-mic"
+          href="https://www.w3schools.com/html/html_images_imagemap.asp">
+        <area shape="circle" coords="174,101,30" alt="red-not-top-left"
+          href="https://www.w3schools.com/html/html_images_imagemap.asp">
+        <area shape="circle" coords="296,393,24" alt="red-note-bot-rig"
+          href="https://www.w3schools.com/html/html_images_imagemap.asp">
+        <area shape="circle" coords="332,78,20" alt="blue-break-top"
+          href="https://www.w3schools.com/html/html_images_imagemap.asp">
+        <area shape="poly"
+          coords="172,381,187,370,191,350,212,334,201,313,297,203,270,184,201,283,186,275,163,310,129,351" alt="Guitar"
+          href="https://en.wikipedia.org/wiki/Guitar">
+        <area shape="poly" coords="270,144,306,148,313,136,393,141,406,156,428,164,363,178,265,184" alt="Trumpet"
+          href="https://en.wikipedia.org/wiki/Trumpet#:~:text=The%20trumpet%20is%20a%20brass,B%E2%99%AD%20or%20C%20Trumpet.">
+        <area shape="poly" coords="205,262,202,223,187,208,190,135,242,133,235,211,222,223,223,261" alt="Violin"
+          href="https://en.wikipedia.org/wiki/Violin">
+      </map>
+    </div>
+
+    <div id="list-container">
+      <ul class="list">
+        <li>Rectangles
+          <ul>
+            <li>Red speaker to the left</li>
+            <li>Purple radio at the bottom right</li>
+            <li>Blue microphone at the bottom</li>
+          </ul>
+        <li>Circles
+          <ul>
+            <li>Upside down red note at top left</li>
+            <li>Red note bottom left</li>
+            <li>Blue minim rest at the top</li>
+          </ul>
+        <li>Polygons
+          <ul>
+            <li>Guitar</li>
+            <li>Trumpet to the left</li>
+            <li>Big yellow violin</li>
+          </ul>
+
+      </ul>
+    </div>
+  </div>
+
+</body>
+
 </html>
 
 <!-- This is a reference

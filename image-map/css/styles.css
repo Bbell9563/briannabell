@@ -1,6 +1,32 @@
+h1{
+  font-size: 50px;
+  text-align: center;
+}
+
+h3{
+  font-size: 25px;
+  text-align: center;
+}
+
 img {
   width: 500px;
   height: auto;
   border: 1px solid grey;
   box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.1);
+}
+
+#list-container{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container{
+  display:flex;
+  justify-content: space-evenly;
+}
+
+.list{
+  padding:30px;
+  font-size: 20px;
 }
