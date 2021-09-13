@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Pizza Contact Contact</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <ul>
+    <li><a href="index.html">Home</li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="order.html">Order</a></li>
+  </ul>
+  <h1>Contact</h1>
+  <form method="POST" action="https://www.stonecoldprofessor.com/pizza-contact.php">
+    <label for="first-name" class="required">First Name</label>
+    <input placeholder="First Name" name="first-name" type="text" id="first-name" required/>
+    <label for="last-name" class="required">Last Name</label>
+    <input placeholder="Last Name" name="last-name" type="text" id="last-name" required/>
+    <label for="email" class="required">Email Address</label>
+    <input placeholder="Email Address" name="email" type="text" id="email" required/>
+    <label for="message" class="required">Message</label>
+    <textarea rows="4" name="message" placeholder="Please write your message here... " id="message" required/></textarea>
+    <div class="button-holder">
+      <input type="submit" value="Send" />
+      <input type="reset" value="Clear" />
+    </div>
+  </form>
+</body>
+
+</html>
