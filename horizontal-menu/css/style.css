@@ -1,0 +1,41 @@
+ul{
+  display:flex;
+  justify-content: right;
+  background-color: hsl(219, 22%, 29%);
+  overflow: hidden;
+  padding: 0;
+  list-style-type:none;
+}
+
+.active-li, .active-a{
+  background-color:#4d64bf;
+  color:white;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.active-a:hover, .active-li:hover{
+  background-color:#4d64bf;
+  color:white;
+  cursor:default;
+}
+
+
+li{padding:10px}
+
+li a{
+  padding: 10px;
+  text-decoration: none;
+  color: #d1d1d1;
+  font-family: 'Grechen Fuemen', cursive;
+}
+
+a:hover{
+  background-color: #4e5c78;
+  color: white;
+}
+li:hover{background-color: #4e5c78;}
+
+body, ul {margin:0;}
+
+h1{text-align: center;}
