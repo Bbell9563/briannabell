@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap');
+
 ul{
   display:flex;
   justify-content: right;
@@ -18,10 +21,14 @@ ul{
   background-color:#4d64bf;
   color:white;
   cursor:default;
+  transform: none;
 }
 
 
-li{padding:10px}
+li{
+  padding:10px;
+  transition: transform 1s;
+}
 
 li a{
   padding: 10px;
@@ -30,11 +37,11 @@ li a{
   font-family: 'Grechen Fuemen', cursive;
 }
 
-a:hover{
+a:hover, li:hover{
   background-color: #4e5c78;
   color: white;
+  transform: scale(1.06);
 }
-li:hover{background-color: #4e5c78;}
 
 body, ul {margin:0;}
 
