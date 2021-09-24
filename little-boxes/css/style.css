@@ -1,25 +1,56 @@
-html{background-color: black;}
 
-body{margin:0;}
+html{background-color: black;}/* set the background color for page to black */
+body{margin:0;}/* took off body default margin*/
 
+/*
+framed holder of imposter and little pet
+changed the display to flex for responsiveness and justified the contents which
+is the imposters in the center
+added buffer around frame of 100 pixels
+created a border of 3px and made it white to see it on the black background
+*/
+.imposter-holder{
+  display:flex;
+  justify-content: center;
+  margin: 100px;
+  border: 3px solid white;
+ }
+
+/*
+sets the imposters box width to 400px and height to 425px
+makes box position relative to allow contents to be moved around
+adds a 150 pixel buffer all the way around imposter 
+*/
 .imposter{
   width: 400px;
   height: 425px;
-  margin-top: 200px;
   position: relative;
+  margin: 150px;
 }
 
+/*
+Main part of the body, has no border radius on the bottom
+to create the round head shape at the top used border radius on the top
+added a border line around the top and side but not on the bottom to make
+it look like the feet are part of the body.
+made sure any overflow of components are hidden
+set the body color to the shadow color
+*/
 .main-body{
   width: 250px;
   height: 325px;
   border-top-left-radius: 50%;
   border-top-right-radius: 120px;
-  background-color: #80231c;
+  background-color: #691610;
   border: 15px solid black;
   border-bottom: none;
   overflow: hidden;
 }
 
+/*
+added a shape to be the highlight and set it to that color
+added border radius to the seen sides to help shape the shadows
+*/
 .body-second{
   position: relative;
   width:225px;
@@ -30,13 +61,20 @@ body{margin:0;}
   border-top-right-radius: 100px;
 }
 
-.feet{
-  display: flex;
-  justify-content: space-between;
-}
+/*
+created a container for the feet, set it to flex and justified the individual feet
+to be on opposite side of the container, space only between them
+*/
+.feet{display: flex;justify-content: space-between;}
 
+/*
+the left foot is placed right below the body and set to be at behind
+the crouch and the body with the z index so the lines would meet correctly
+only the sides and bottom of foot has borders and the bottom corners have 
+radius to round the feet
+*/
 .left-foot{
-  background-color: #80231c;
+  background-color: #691610;
   border: 15px solid black;
   border-top: none;
   width:85px;
@@ -45,8 +83,14 @@ body{margin:0;}
   border-bottom-right-radius: 40px;
   z-index:-2
 }
+/*
+the right foot is placed right below the body
+has a margin to the right to meet the body correctly
+bottom of foot has borders and the bottom corners have 
+radius to round the feet
+*/
 .right-foot{
-  background-color: #80231c;
+  background-color: #691610;
   border: 15px solid black;
   border-top: none;
   width:90px;
@@ -55,13 +99,17 @@ body{margin:0;}
   border-bottom-left-radius: 35px;
   border-bottom-right-radius: 60px;
 }
+
+/*
+
+*/
 .crouch{
   position:absolute;
   width:200px;
   height:200px;
   border-bottom: 15px solid black;
   border-radius: 60px;
-  background-color: #80231c;
+  background-color: #691610;
   top:135px;
   left: 25px;
   z-index:-1;
@@ -87,7 +135,7 @@ body{margin:0;}
   position: relative;
   top:30px;
   right: -5px;
-  background-color: #80231c;
+  background-color: #691610;
   border-top-right-radius: 40px;
 }
 
@@ -106,6 +154,9 @@ body{margin:0;}
   overflow:hidden;
 }
 
+/*
+
+*/
 .face-shine{
   background-color: #e6fcff;
   width:90px;
@@ -118,6 +169,9 @@ body{margin:0;}
   z-index: 2;
 }
 
+/*
+
+*/
 .face-second{
   background-color:#94c9d1 ;
   position:relative;
@@ -130,13 +184,20 @@ body{margin:0;}
   top: -50px;
   left: -15px;
 }
+
+/*
+
+*/
 .little-guy{
   transform: scale(0.6);
   position:absolute;
   top:-50px;
-  right:-140px;
+  right:-300px;
 }
 
+/*
+
+*/
 .little-face{
   border-radius: 45%;
   height: 200px;
@@ -144,11 +205,17 @@ body{margin:0;}
   top:20px;
 }
 
+/*
+
+*/
 .little-face-second{
   width:190px;
   height:190px
 }
 
+/*
+
+*/
 .crown{
   position:absolute;
   top:-70px;
@@ -158,15 +225,26 @@ body{margin:0;}
   z-index: -4;
 }
 
+/*
+
+*/
 .left-crown{transform:rotate(-20deg);}
+/*
+
+*/
 .right-crown{transform:rotate(20deg);}
+/*
+
+*/
 .middle-crown{top:-15px;}
+/*
 
-.spike{
-  display:flex;
-  position: relative;
+*/
+.spike{display:flex;position: relative;
 }
+/*
 
+*/
 .crown-spike{
   height:0;
   width:1px;
@@ -176,13 +254,36 @@ body{margin:0;}
   margin:-3px;
   position: relative;
 }
+/*
 
+*/
 .right-spike{transform: rotate(-6deg); top:10px;}
+/*
+
+*/
 .right-spike2{transform: rotate(-12deg);top:20px;}
+/*
+
+*/
 .left-spike{transform: rotate(6deg);top:10px;}
+/*
+
+*/
 .left-spike2{transform: rotate(12deg);top:20px;}
 
+.big-star, .little-star{
+  position:absolute;
+  width:8px;
+  height:8px;
+  border-radius: 50%;
+  background-color: white;
+}
 
+.little-star{
+  width:5px;
+  height:5px;
+  background-color:#f0cdb4;
+}
 
 
 
