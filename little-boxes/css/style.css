@@ -94,7 +94,6 @@ radius to round the feet
   height:75px;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 40px;
-  /* z-index:-2 */
 }
 /*
 the right foot is placed right below the body
@@ -322,7 +321,7 @@ each star is positioned absolute relative to the imposter holder
 }
 
 /*
-
+Changed the little start to be smaller and slightly different color
 */
 .little-star{
   width:5px;
@@ -331,7 +330,8 @@ each star is positioned absolute relative to the imposter holder
 }
 
 /*
-
+added in a second "crown" but scaled it up and placed it behind the crown
+to make a border
 */
 .crown-border{
   position:absolute;
@@ -341,7 +341,7 @@ each star is positioned absolute relative to the imposter holder
 }
 
 /*
-
+turned the color of the crown black to make the "border" of the crown black
 */
 .crown-border-spike{
   border-bottom: solid 100px black;
