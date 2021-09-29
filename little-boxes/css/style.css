@@ -9,6 +9,7 @@ is the imposters in the center
 added buffer around frame of 100 pixels
 created a border of 3px and made it white to see it on the black background
 made sure any stars outside of frame is hidden when screen resizes
+used position relative to position div contents relative to the div
 */
 .imposter-holder{
   width:1235px;
@@ -19,18 +20,22 @@ made sure any stars outside of frame is hidden when screen resizes
   border: 3px solid white;
   position: relative;
   overflow: hidden;
+  background-color: #1a1a1a;
  }
 
 /*
 sets the imposters box width to 400px and height to 425px
 makes box position relative to allow contents to be moved around
 adds a 150 pixel buffer all the way around imposter 
+used position relative to position div contents relative to the div
+changed the top margin to be a little bigger
 */
 .imposter{
   width: 400px;
   height: 425px;
   position: relative;
   margin: 150px;
+  margin-top: 200px;
 }
 
 /*
@@ -50,6 +55,8 @@ set the body color to the shadow color
   border: 15px solid black;
   border-bottom: none;
   overflow: hidden;
+  z-index:3;
+  position: relative;
 }
 
 /*
@@ -64,6 +71,7 @@ added border radius to the seen sides to help shape the shadows
   border-bottom-right-radius: 150px;
   border-bottom-left-radius: 100px;
   border-top-right-radius: 100px;
+  z-index:3;
 }
 
 /*
@@ -86,7 +94,7 @@ radius to round the feet
   height:75px;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 40px;
-  z-index:-2
+  /* z-index:-2 */
 }
 /*
 the right foot is placed right below the body
@@ -103,10 +111,14 @@ radius to round the feet
   margin-right: 120px;
   border-bottom-left-radius: 35px;
   border-bottom-right-radius: 60px;
+  z-index: 3;
 }
 
 /*
-
+this is a div for the crouch line between the legs
+only added a border to the bottom
+used z index to place the crouch behind the right leg and body but above the left leg
+used absolute position to place it anywhere i wanted in the div without moving other things around
 */
 .crouch{
   position:absolute;
@@ -117,9 +129,13 @@ radius to round the feet
   background-color: #691610;
   top:135px;
   left: 25px;
-  z-index:-1;
 }
 
+/*
+added the backpack placed it behind the body
+used absolute position to place it anywhere i wanted in the div without moving other things around
+hid the overflow from the backpack shadow shape only game a radius to the right top and bottom corners
+*/
 .backpack{
   position:absolute;
   width:70px;
@@ -127,23 +143,32 @@ radius to round the feet
   border:15px solid black;
   background-color: #ab1c11;
   top:120px;
-  z-index: -1;
+  z-index: 1;
   right:60px;
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
   overflow: hidden;
 }
 
+/*
+created this shape to add the shadow to the backpack
+positioned it in the backpack where i wanted
+*/
 .backpack-shadow{
   width:70px;
   height:190px;
   position: relative;
-  top:30px;
+  top:50px;
   right: -5px;
   background-color: #691610;
   border-top-right-radius: 40px;
 }
 
+/*
+created a shape for the face glass. Positioned it using absolute within the imposter div.
+put a border around the whole face part and hid the overflow from the face-shine and main mask color
+made the face the shadow color
+*/
 .face{
   position: absolute;
   width:175px;
@@ -157,10 +182,13 @@ radius to round the feet
   border-bottom-right-radius: 70px;
   border-bottom-left-radius: 50px;
   overflow:hidden;
+  z-index:3;
 }
 
 /*
-
+added a face-shine shape for the shine of the glass
+changed the z-index to place it above the face and main color
+added a general border radius and changed the top left corner to be different
 */
 .face-shine{
   background-color: #e6fcff;
@@ -171,11 +199,12 @@ radius to round the feet
   left: 25px;
   border-radius: 80px;
   border-top-left-radius: 130px;
-  z-index: 2;
+  z-index: 3;
 }
 
 /*
-
+the second color or the main color of the mask is a different shape gave each corner a different 
+radius and position it where i wanted
 */
 .face-second{
   background-color:#94c9d1 ;
@@ -191,17 +220,20 @@ radius to round the feet
 }
 
 /*
-
+copied the imposter to make a second guy and scale it down for the "pet"
+position it to the right of the original imposter
 */
 .little-guy{
   transform: scale(0.6);
   position:absolute;
   top:-50px;
   right:-300px;
+  z-index: 4;
 }
 
 /*
-
+adjusted the imposters face a little to match what the little guy looks like
+making the mask relatively bigger and boxier and changed the border radius
 */
 .little-face{
   border-radius: 45%;
@@ -211,7 +243,7 @@ radius to round the feet
 }
 
 /*
-
+adjusted the face-second to match the little-face a little better. changed the width and height
 */
 .little-face-second{
   width:190px;
@@ -219,7 +251,10 @@ radius to round the feet
 }
 
 /*
-
+added a crown to the main imposter 
+used position absolute to place it on the head and changed the z-index to hide the overflow
+of the crown behind the imposters body. scaled the crown up from the original size.
+used display flex to light up the left middle and right crown parts
 */
 .crown{
   position:absolute;
@@ -227,19 +262,19 @@ radius to round the feet
   left:100px;
   display:flex;
   transform: scale(1.5);
-  z-index: -4;
+  z-index: 2;
 }
 
 /*
-
+rotated the left part of the crown -20 degrees
 */
 .left-crown{transform:rotate(-20deg);}
 /*
-
+rotated the right part of the crown to 20 degrees
 */
 .right-crown{transform:rotate(20deg);}
 /*
-
+moved the middle part of the crown to be higher than the other parts
 */
 .middle-crown{top:-15px;}
 /*
@@ -248,47 +283,68 @@ radius to round the feet
 .spike{display:flex;position: relative;
 }
 /*
-
+crown spike creates a box with a width of 1px and 0 height and makes all the
+borders transparent except the bottom to created a triangle
+colors the spike yellow and gives it a -2.4px margin to push each spike together
 */
 .crown-spike{
   height:0;
   width:1px;
   border: 5px solid transparent;
   border-bottom: solid 100px yellow;
-  z-index:4;
-  margin:-3px;
+  margin:-2.4px;
   position: relative;
 }
 /*
-
+each crown part has 5 of these spikes to create a thicker triangle
+positioned the middle at zero from the top, the immediate spikes to the left and right
+are positioned 10px below that and the end pieced 20 pixels down from the top to created
+a pointer triangle
 */
 .right-spike{transform: rotate(-6deg); top:10px;}
-/*
-
-*/
 .right-spike2{transform: rotate(-12deg);top:20px;}
-/*
-
-*/
 .left-spike{transform: rotate(6deg);top:10px;}
-/*
-
-*/
 .left-spike2{transform: rotate(12deg);top:20px;}
 
+
+/*
+added stars to the background the big and little stars are
+made by give the square a border radius of 50% to make a circle
+each star is positioned absolute relative to the imposter holder
+
+*/
 .big-star, .little-star{
   position:absolute;
   width:8px;
   height:8px;
   border-radius: 50%;
   background-color: white;
-  z-index:-5;
 }
 
+/*
+
+*/
 .little-star{
   width:5px;
   height:5px;
   background-color:#f0cdb4;
+}
+
+/*
+
+*/
+.crown-border{
+  position:absolute;
+  z-index:1;
+  transform:scale(1.9);
+  top: -100px;
+}
+
+/*
+
+*/
+.crown-border-spike{
+  border-bottom: solid 100px black;
 }
 
 
