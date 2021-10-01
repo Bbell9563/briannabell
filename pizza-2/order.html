@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Pizza Contact Order</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="order.html">Order</a></li>
+  </ul>
+  <h1>Order</h1>
+  <form method="POST" action="https://www.stonecoldprofessor.com/pizza-order.php">
+    <div id="pizza">
+      <h2>What size of pizza</h1>
+        <!-- this will be radio button -->
+        <input type="radio" name="size" value="Large" id="large">
+        <label for="large">Large</label>
+        <input type="radio" name="size" value="Medium" id="medium">
+        <label for="medium">Medium</label>
+        <input type="radio" name="size" value="Small" id="small">
+        <label for="small">Small</label>
+        </select>
+        <h2>What type of crust</h2>
+        <select name="crust" id="crust">
+          <option value="hand tossed">Hand Tossed</option>
+          <option value="thin">Thin</option>
+          <option value="Pan">Pan</option>
+        </select>
+        <h2>Toppings</h2>
+        <label for="pepperoni">Pepperoni</label>
+        <input type="checkbox" name="toppings[]" id="pepperoni" value="pepperoni" />
+        <label for="olives">Olives</label>
+        <input type="checkbox" name="toppings[]" id="olives" value="olives" />
+        <label for="pineapple">Pineapple</label>
+        <input type="checkbox" name="toppings[]" id="pineapple" value="pineapple" />
+        <label for="sausage">Sausage</label>
+        <input type="checkbox" name="toppings[]" id="sausage" value="sausage" />
+        <label for="hame">Ham</label>
+        <input type="checkbox" name="toppings[]" id="ham" value="ham" />
+        <label for="jalapenos">Jalapenos</label>
+        <input type="checkbox" name="toppings[]" id="jalapenos" value="jalapenos" />
+        <label for="bellpeppers">Bell Peppers</label>
+        <input type="checkbox" name="toppings[]" id="bellpeppers" value="bellpeppers" />
+        <label for="onions">Onions</label>
+        <input type="checkbox" name="toppings[]" id="onions" value="onions" />
+        <!-- <label for=""></label>
+        <input type="checkbox" name="toppings[]" id="" value="" /> -->
+    </div>
+    <div id="user-info">
+      <!-- put first and last in same line -->
+      <div>
+        <label for="first-name" class="required">First Name</label>
+        <input placeholder="First Name" name="first" type="text" id="first-name" required />
+        <label for="last-name" class="required">Last Name</label>
+        <input placeholder="Last Name" name="last" type="text" id="last-name" required />
+      </div>
+      <!-- put address 1 and 2 in same line -->
+      <div>
+        <label for="add1">Address 1</label>
+        <input placeholder="Address 1" name="add1" type="text" id="add1" />
+        <label for="add2">Address 2</label>
+        <input placeholder="Address 2" name="add2" type="text" id="add2" />
+      </div>
+      <!-- put city state and zip in same line -->
+      <div>
+        <label for="city">City</label>
+        <input placeholder="City" name="city" type="text" id="city" />
+        <label for="state">State</label>
+        <select placeholder="State" name="state" id="state">
+          <option value="UT">Utah</option>
+          <option value="NV">Nevada</option>
+          <option value="CA">California</option>
+          <option value="OR">Oregon</option>
+        </select>
+        <label for="zip">Zip Code</label>
+        <input placeholder="Zip Code" name="zip" type="text" id="zip" />
+      </div>
+      <!-- put email and phone in same line -->
+      <div>
+        <label for="email">Email Address</label>
+        <input placeholder="Email Address" name="email" type="text" id="email" />
+        <label for="phone">Phone Number</label>
+        <input placeholder="Phone Number" name="phone" type="text" id="phone" />
+      </div>
+      <label for="comments">Comments</label>
+      <textarea rows="4" name="comments" placeholder="Please write your comments here... " id="comments"></textarea>
+    </div>
+    <div class="button-holder">
+      <input type="submit" value="Send" />
+      <input type="reset" value="Clear" />
+    </div>
+  </form>
+</body>
+
+</html>
