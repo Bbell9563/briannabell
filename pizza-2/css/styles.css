@@ -1,5 +1,4 @@
 h1{text-align: center;}
-/* html{background-color: #f5f3e9;} */
 form{margin: 5px 20%;}
 
 input[type=text]{
@@ -103,4 +102,29 @@ p{text-align: center;}
 
 .two-input{
   width:48%;
+}
+
+.topping-holder{
+  display:flex;
+  justify-content: space-around;
+}
+
+.meat-toppings{
+  display: flex;
+  flex-direction: column;
+}
+
+.vegtable-toppings{
+  display: flex;
+  flex-direction: column;
+}
+
+select{
+  width: 100%;
+  box-sizing:border-box;
+  margin:5px 0 ;
+  padding:5px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid grey;
 }
