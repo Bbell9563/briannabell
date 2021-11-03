@@ -6,32 +6,35 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body style="background-color:#f4f5e4">
   <ul>
     <li><a href="index.html">Home</a></li>
     <li class="active-li"><a class="active-a" href="contact.html">Contact</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="order.html">Order</a></li>
   </ul>
-  <h1>Contact</h1>
-  <p>
-    You can contact us here about any questions, concerns, or if you want to tell us about the amazing 
-    job we are doing. You can expect a timely response! All we need is your name and a good email to reach you at.
-  </p>
-  <form method="POST" action="https://www.stonecoldprofessor.com/pizza-contact.php">
-    <label for="first-name" class="required">First Name</label>
-    <input placeholder="First Name" name="first-name" type="text" id="first-name" required/>
-    <label for="last-name" class="required">Last Name</label>
-    <input placeholder="Last Name" name="last-name" type="text" id="last-name" required/>
-    <label for="email" class="required">Email Address</label>
-    <input placeholder="Email Address" name="email" type="text" id="email" required/>
-    <label for="message" class="required">Message</label>
-    <textarea rows="4" name="message" placeholder="Please write your message here... " id="message" required></textarea>
-    <div class="button-holder">
-      <input type="submit" value="Send" />
-      <input type="reset" value="Clear" />
-    </div>
-  </form>
+  <div class="form-holder">
+    <h1 class="form-header">Contact</h1>
+    <p>
+      You can contact us here about any questions, concerns, or if you want to tell us about the amazing
+      job we are doing. You can expect a timely response! All we need is your name and a good email to reach you at.
+    </p>
+    <form method="POST" action="https://www.stonecoldprofessor.com/pizza-contact.php">
+      <label for="first-name" class="required">First Name</label>
+      <input placeholder="First Name" name="first-name" type="text" id="first-name" required />
+      <label for="last-name" class="required">Last Name</label>
+      <input placeholder="Last Name" name="last-name" type="text" id="last-name" required />
+      <label for="email" class="required">Email Address</label>
+      <input placeholder="Email Address" name="email" type="text" id="email" required />
+      <label for="message" class="required">Message</label>
+      <textarea rows="4" name="message" placeholder="Please write your message here... " id="message"
+        required></textarea>
+      <div class="button-holder">
+        <input type="submit" value="Send" />
+        <input type="reset" value="Clear" />
+      </div>
+    </form>
+  </div>
 </body>
 
 </html>
