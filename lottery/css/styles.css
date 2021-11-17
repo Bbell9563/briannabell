@@ -1,0 +1,22 @@
+#lotteryNumberHolder{
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid black;
+  margin: 30px 20%;
+}
+
+.lottery-number{
+  font-size: 50px;
+  padding: 20px;
+}
+
+#error{
+  display:none;
+  color: red;
+}
+
+h2{text-align: center;}
+
+#results{
+  display: none;
+}
