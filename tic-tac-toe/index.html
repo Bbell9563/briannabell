@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="css/styles.css" />
+  <Title>Tic Tac Toe</Title>
+</head>
+
+<body>
+  <div class="header">
+    <h1>Tic Tac Toe</h1>
+  </div>
+
+  <div id="form-holder">
+    <form onsubmit="inputUsers()">
+      <div class="input-holder">
+        <label for="player1">Player 1</label>
+        <input id="player1" />
+      </div>
+      <div class="input-holder">
+        <label for="player2">Player 2</label>
+        <input id="player2" />
+      </div>
+      <input type="submit" value="Let Play" />
+    </form>
+  </div>
+
+  <div id="game">
+    <h1 id="turn-display"></h1>
+    <div class="grid-divider">
+      <div class="grid-holder">
+        <div class="grid-item" id="grid-1" onclick="markSquare('grid-1')"></div>
+        <div class="grid-item" id="grid-2" onclick="markSquare('grid-2')"></div>
+        <div class="grid-item" id="grid-3" onclick="markSquare('grid-3')"></div>
+        <div class="grid-item" id="grid-4" onclick="markSquare('grid-4')"></div>
+        <div class="grid-item" id="grid-5" onclick="markSquare('grid-5')"></div>
+        <div class="grid-item" id="grid-6" onclick="markSquare('grid-6')"></div>
+        <div class="grid-item" id="grid-7" onclick="markSquare('grid-7')"></div>
+        <div class="grid-item" id="grid-8" onclick="markSquare('grid-8')"></div>
+        <div class="grid-item" id="grid-9" onclick="markSquare('grid-9')"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="winner"></div>
+
+
+
+
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
