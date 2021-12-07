@@ -15,20 +15,20 @@
     <form onsubmit="inputUsers()">
       <div class="input-holder">
         <label for="player1">Player 1</label>
-        <input id="player1" />
+        <input class="text-input" id="player1" />
       </div>
       <div class="input-holder">
         <label for="player2">Player 2</label>
-        <input id="player2" />
+        <input class="text-input" id="player2" />
       </div>
-      <input type="submit" value="Let Play" />
+      <input type="submit" value="Let's Play" id="submit-button" />
     </form>
   </div>
 
   <div id="game">
     <div id="turn-display"></div>
     <div class="grid-divider">
-      <div class="grid-holder">
+      <div id="grid-holder">
         <div class="grid-item" id="grid-1" onclick="markSquare('grid-1')"></div>
         <div class="grid-item" id="grid-2" onclick="markSquare('grid-2')"></div>
         <div class="grid-item" id="grid-3" onclick="markSquare('grid-3')"></div>
