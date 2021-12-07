@@ -7,6 +7,7 @@ var xLetter = '<img src="img/LetterX.png" alt="letter X">'
 var oLetter = '<img src="img/LetterO.png" alt="letter 0">'
 var redX = '<img src="img/RedX.png" alt="red letter x">'
 var redO = '<img src="img/RedO.png" alt="red letter o">'
+var gameWon = false
 
 
 
@@ -21,9 +22,10 @@ function inputUsers() {
   document.getElementById("turn-display").innerHTML = `It's ${userTurn}'s Turn'`
 }
 
-function changeTurn() {
+function changeTurn(number) {
   turns++
-  if (userTurn == user1) {
+  if(number == 1){userTurn = user1}
+  else if (userTurn == user1) {
     userTurn = user2
   }
   else {
@@ -33,8 +35,10 @@ function changeTurn() {
   document.getElementById("turn-display").innerHTML = `It's ${userTurn}'s Turn'`
 }
 
-function defineWinner(winner, grid1, grid2, grid3) {
+function defineWinner(winner) {
+  document.getElementById("winner-display").style = "display: block;"
   document.getElementById("winner").innerHTML = `The winner is ${winner}`
+  gameWon = true
 }
 
 function checkForWin() {
@@ -75,7 +79,8 @@ function checkForWin() {
 
 function markSquare(square) {
   let currentSquare = document.getElementById(`${square}`).innerHTML
-  if(currentSquare != ""){}
+  if(gameWon == true){}
+  else if(currentSquare != ""){}
   else if (userTurn == user1) {
     document.getElementById(`${square}`).innerHTML = xLetter
     checkForWin()
@@ -99,4 +104,19 @@ function highlightSquares(grid1, grid2, grid3, letter){
     document.getElementById(`${grid2}`).innerHTML = redO
     document.getElementById(`${grid3}`).innerHTML = redO
   }
+}
+
+function resetBoard(){
+  document.getElementById("grid-1").innerHTML = ""
+  document.getElementById("grid-2").innerHTML = ""
+  document.getElementById("grid-3").innerHTML = ""
+  document.getElementById("grid-4").innerHTML = ""
+  document.getElementById("grid-5").innerHTML = ""
+  document.getElementById("grid-6").innerHTML = ""
+  document.getElementById("grid-7").innerHTML = ""
+  document.getElementById("grid-8").innerHTML = ""
+  document.getElementById("grid-9").innerHTML = ""
+  changeTurn(1)
+  gameWon = false
+  document.getElementById("winner-display").style = "display:none;"
 }
