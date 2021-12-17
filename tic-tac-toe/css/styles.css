@@ -31,6 +31,7 @@ label{color:white;}
 #winner{color:white;}
 #turn-display{color:white;}
 
+
 .input-holder{
   display: flex;
   justify-content: space-between;
@@ -47,6 +48,7 @@ label{color:white;}
 .grid-divider{
   display:flex;
   justify-content: center;
+  background-image: url('/img/GOTbackground.jpeg');
 }
 
 .grid-item{
